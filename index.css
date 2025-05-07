@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url("bg.png");
+    /*background-image: linear-gradient(to bottom right, #d5bdf3, #c4b3e0);*/
+    padding: 10px; /* helps on mobile to prevent edge-clipping */
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.welcome-section {
+    text-align: center;
+    position: relative;
+    padding-bottom: 80px; /* ensures welcome-text doesn't overlap content on small screens */
+}
+
+.welcome-img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.welcome-text {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3d4c91;
+    color: white;
+    padding: 10px 20px;
+    font-size: 32px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.cecelib-icon img {
+    width: 250px;
+    border-radius: 10px;
+    border: 5px solid #9a81bc;
+    margin-bottom: 20px;
+}
+
+.cecelib-text-box {
+    background: linear-gradient(to bottom, #3e49b6, #8e2de2);
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 600px;
+    color: white;
+    font-size: 16px;
+    line-height: 1.6;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    text-align: justify;
+}
+
+.start-btn {
+    display: block;
+    margin: 40px auto;
+    background-color: #f0a3da;
+    color: #333;
+    border: none;
+    padding: 14px 28px;
+    font-size: 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    animation: pulse 2s infinite;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.start-btn:hover {
+    transform: scale(1.05);
+    background-color: #e68cc9;
+}
+
+.start-btn:active {
+    color: #ffffff;
+    text-shadow: 0 0 6px #fff, 0 0 10px #ff00ff, 0 0 16px #ff00ff;
+    transform: scale(0.98);
+}
+
+/* Responsive for tablets and small laptops */
+@media screen and (max-width: 768px) {
+    .welcome-text {
+        font-size: 20px;
+        padding: 8px 16px;
+    }
+
+    .cecelib-icon img {
+        width: 180px;
+    }
+
+    .cecelib-text-box {
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .start-btn {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+}
+
+/* Responsive for mobile phones */
+@media screen and (max-width: 480px) {
+    .welcome-text {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+
+    .cecelib-icon img {
+        width: 150px;
+    }
+
+    .cecelib-text-box {
+        font-size: 13px;
+        padding: 12px;
+    }
+
+    .start-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
