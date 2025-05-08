@@ -319,39 +319,48 @@ body::before {
 }
 
 /* -------------------- Responsive -------------------- */
+/* -------------------- Responsive -------------------- */
 @media (max-width: 768px) {
     .book-entry {
         flex-direction: column;
         align-items: center;
+        gap: 15px; 
+        width: 76%;
+        margin-left: 7rem;
+        padding: 10px;
+       
     }
 
     .book-cover {
-        width: 60%;
+        width: 80%; /* Adjust width for mobile view */
     }
 
     .book-synopsis {
         width: 100%;
+        padding: 12px; /* Ensure content doesn't stretch too far */
     }
 
     .sidebar {
         left: 10px;
+        top: 140px; /* Adjust for better spacing on small screens */
     }
 
     body::before {
-        width: 60px;
+        width: 60px; /* Adjust left border width */
     }
 
     .search-container input[type="text"] {
-        width: 180px;
-    }
-}
-
-@media (max-width: 480px) {
-    .header-title {
-        font-size: 1.5em;
+        width: 180px; /* Adjust width of the search bar */
     }
 
-    .search-container input[type="text"] {
-        width: 150px;
+    /* Make store logos smaller when screen size is reduced */
+    .store-logos img {
+        width: 40px; /* Smaller logo size */
+        height: 40px;
+    }
+
+    .logo-item img {
+        width: 120px; /* Adjust logo size for smaller screens */
+        height: 100px;
     }
 }
