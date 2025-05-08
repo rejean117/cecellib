@@ -323,53 +323,10 @@ body::before {
 }
 
 /* -------------------- Responsive -------------------- */
-@media (max-width: 768px) {
-  html, body {
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-
-  .content-wrapper {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    width: 95%;
-    height: auto;
-    margin: 100px auto 20px auto;
-  }
-
-  .search-container {
-    position: fixed;
-    top: 10px;
-    left: 80px;
-    right: 10px;
-    width: auto;
-    justify-content: space-between;
-    padding: 5px 10px;
-  }
-
-  .search-container input[type="text"] {
-    width: 100%;
-    font-size: 12px;
-  }
-
-  .sidebar {
-    position: fixed;
-    top: 140px;
-    left: 10px;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .sidebar a {
-    width: 50px;
-    height: 50px;
-  }
-
-  .sidebar img {
-    width: 28px;
-    height: 28px;
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
   }
 
   .book-entry {
@@ -378,70 +335,53 @@ body::before {
   }
 
   .book-cover {
-    width: 70%;
+    width: 80%;  /* Adjust the width to fit the screen */
+    max-width: 180px;
+    margin-bottom: -1rem;
+    margin-top: 2rem;
   }
 
   .book-synopsis {
-    width: 90%;
-    margin: 10px auto;
+    width: 70%;  /* Reduce the width of synopsis on small screens */
+        padding: 10px;
+        margin-top: 1opx;
+        font-size: 14px; /* Reduce font size on smaller screens */
+        text-align: center;
   }
 
-  .site-header {
-    text-align: center;
-    padding: 20px;
-    font-size: 1.8rem;
+  .search-container {
+    width: 90%;  /* Adjust width of search container */
+        max-width: 150px; /* Ensure search bar doesn't become too wide */
+        padding: 1px 10px;
+        margin-top: 1px;
+        box-sizing: border-box; /* Ensure padding does not affect width */
+        overflow: hidden; 
+        margin-left: 5rem;
   }
 
-  .header-title {
-    font-size: 1.8rem;
+  .search-container input {
+    width: 100%;
   }
 
-  .user-menu {
-    top: 12px;
-    right: 12px;
-  }
-
-  body::before {
-    width: 60px;
+  .search-container button {
+    width: 100%;
   }
 
   .series-nav {
-    flex-wrap: wrap;
-    gap: 15px;
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  h1,
-  .header-title {
-    font-size: 1.4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    width: 100%;
   }
 
-  .search-container input[type="text"] {
-    width: 130px;
+  .user-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
-  .book-synopsis p {
-    font-size: 0.95rem;
-  }
-
-  .book-cover {
-    width: 90%;
-  }
-
-  .sidebar a {
-    width: 45px;
-    height: 45px;
-  }
-
-  .sidebar img {
-    width: 24px;
-    height: 24px;
-  }
-
-  .series-nav a {
-    font-size: 16px;
-    padding: 6px 12px;
+  .dropdown {
+    width: 100%;
+    text-align: center;
   }
 }
